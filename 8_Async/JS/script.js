@@ -135,3 +135,17 @@ async function chamadaAsync() {
 }
 
 chamadaAsync();
+
+// 9 - Generatos 
+// Generatos funcionam de fomram semelhants as promises;
+// Ações podem ser pausadas e continuadas depois;
+// temos novos operadores, como: function* e yield;
+function* generator (){ 
+  yield 1;
+  yield 2;
+}
+
+const gen = generator();
+
+console.log(gen.next().value);
+console.log(gen.next().value);
