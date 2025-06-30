@@ -73,7 +73,7 @@ header.insertBefore(p, title);
 
 // 2 - Alterando o HTMl com appendChild
 // Com o appendChild é possivel addicionar um elemento dentro de outro;
-// Este elemento adicionado será o útilmo elemento do elemento pai; 
+// Este elemento adicionado será o útilmo elemento do elemento pai;
 const navLinks = document.querySelector("nav ul");
 
 const li = document.createElement("li");
@@ -84,3 +84,62 @@ navLinks.appendChild(li);
 // Já o método replaceChild é utilzado para trocar um elemento;
 // Novamente precisamos do elemento pai;
 // E também o elemento para ser substituído e o que vai substituir;
+const h2 = document.createElement("h2");
+
+h2.textContent = "Meu novo título!";
+
+header.replaceChild(h2, title);
+
+// 4 - Creinado nós com texto
+// Os textos poder ser manipulados com métodos também;
+// Temos o createTextNode, que cria um nó de texto;
+// E este nó pode ser inserido em um elemento;
+const myText = document.createTextNode("Agora vamos colocar mais um título");
+
+console.log(myText);
+
+const h3 = document.createElement("h3");
+
+h3.appendChild(myText);
+
+console.log(h3);
+
+mainContainer.appendChild(h3);
+
+const meuNome = document.createTextNode("Meu Nome é Nicolas");
+
+console.log(meuNome);
+
+const p1 = document.createElement("p");
+
+p1.appendChild(meuNome);
+
+console.log(p1);
+
+header.appendChild(p1);
+
+// 5 - Trabalhando com altributos
+// Podemos ler e alterar os valores dos atributos;
+// Para ler vamos utilizar o método getAttribute;
+// E para alterar utilizaremos setAttribute, este leva o nome do atributo e o valor para alterar;
+const firstLink = navLinks.querySelector("a");
+
+console.log(firstLink);
+
+firstLink.setAttribute("href", "https://www.google.com/");
+
+console.log(firstLink.getAttribute("href"));
+
+firstLink.setAttribute("target", "_blank");
+
+// 6 - Altura e largura de elementos
+// É possivel também pegar valores com altura e largura de elementos;
+// Vamos utilizar as propriedades: offsetWidth e offsetHeight;
+// Se queremos desconsiderar as bordas, temos: clientWidth e clientHeight;
+const footer = document.querySelector("footer");
+
+console.log(footer.offsetWidth);
+console.log(footer.offsetHeight);
+
+console.log(footer.clientHeight);
+console.log(footer.clientWidth);
