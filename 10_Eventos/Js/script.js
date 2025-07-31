@@ -131,7 +131,7 @@ window.addEventListener("scroll", (e) => {
 });
 
 // 10 - Envento por foco
-// O evento focs é disparado quando focamos em um elemento;
+// O evento focus é disparado quando focamos em um elemento;
 // Já o blur é quando perde o foco do elemento;
 // Estes são comuns em inputs;
 const input = document.querySelector("#my-input");
@@ -142,3 +142,40 @@ input.addEventListener("focus", (e) => {
 input.addEventListener("blur", (e) => {
   console.log("Saiu do input!");
 });
+
+// 11 - Eventos de carregamento de página
+// Podemos adicionar um evento ao carregar a página, que é o load;
+// E qunado o usuário sai da página, que é o beforeunload,
+window.addEventListener("load", () => {
+  console.log("A página carregou!");
+});
+
+window.addEventListener("beforeunload", (e) => {
+  e.preventDefault();
+  e.returnValue = "teste";
+});
+
+// 12 - Técnica de debounce
+// O debounce é uma técnica utilizada para fazer um evento disparar menos vezes;
+// Isso poupa memória do usuário, pois talvez nem sempre o evento sejá necessário;
+
+const debounce = (f, delay) => {
+  let timeout;
+
+  return (...arguments) => {
+    if (timeout) {
+      clearTimeout(timeout);
+    }
+
+    timeout = setTimeout(() => {
+      f.apply(arguments);
+    }, delay);
+  };
+};
+
+window.addEventListener(
+  "mousemove",
+  debounce(() => {
+    console.log("Executando a cada 400ms");
+  }, 400)
+);
