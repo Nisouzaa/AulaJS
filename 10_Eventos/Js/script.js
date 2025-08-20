@@ -145,7 +145,7 @@ input.addEventListener("blur", (e) => {
 
 // 11 - Eventos de carregamento de página
 // Podemos adicionar um evento ao carregar a página, que é o load;
-// E qunado o usuário sai da página, que é o beforeunload,
+// E quando o usuário sai da página, que é o beforeunload,
 window.addEventListener("load", () => {
   console.log("A página carregou!");
 });
