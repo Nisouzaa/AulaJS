@@ -44,7 +44,6 @@ console.log(product);
 // 5 - Encontrando elementos por Css
 // Com o método querySelectorALL selecionamos um conjunto de elementos por meio de um seletor de CSS;
 // E com o querySelector apenas um elemento, com base também um seletor de CSS;
-
 // const productQuery = document.querySelectorAll(".product");
 
 // console.log(productQuery);
