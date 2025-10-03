@@ -41,7 +41,7 @@
 // console.log(name);
 
 // // 2 - Arrow Functions
-// // As arrow functions são um recurso para cirar funções de forma mais simples;
+// // As arrow functions são um recurso para criar funções de forma mais simples;
 // // Alguns aspectos a diferenciam das funções comuns;
 // // Por exemplo o this, que é relacionado ao elemento pai de quem está executando;
 
@@ -112,21 +112,36 @@
 
 // console.log(availableUsers);
 
-// 4 - Map 
-// O map também é um método de array, percorre todos os elementos do mesmo; 
+// 4 - Map
+// O map também é um método de array, percorre todos os elementos do mesmo;
 // O map é utilizado para modificar o array de origem;
 // filter remove elementos desnecessários, map altera os que preciamos;
 const products = [
-    {name: "Camisa", price: 10.99, category: "Roupas"},
-    {name: "Chaleira Elétrica", price: 150, category: "Eletro"},
-    {name: "Fogão", price: 499, category: "Eletro"},
-    {name: "Calça Jeans", price: 87.99, category: "Roupas"},
+  { name: "Camisa", price: 10.99, category: "Roupas" },
+  { name: "Chaleira Elétrica", price: 150, category: "Eletro" },
+  { name: "Fogão", price: 499, category: "Eletro" },
+  { name: "Calça Jeans", price: 87.99, category: "Roupas" },
 ];
 
-products.map((product) =>{
-    if(product.category === "Roupas"){
-        product.onSale = true;
-    }
+products.map((product) => {
+  if (product.category === "Roupas") {
+    product.onSale = true;
+  }
 });
 
 console.log(products);
+
+const aula = [
+    { portugues: "verbo", sala: 2, professor: "Guilherme" },
+    { matematica: "Dividir", sala: 4, professor: "Luan" },
+    { geografia: "Montanhas", sala: 5, professor: "Denes" },
+    { ingles: "tuby", sala: 3, professor: "Romero" },
+];
+
+aula.map((materia) => {
+    if(materia.sala === 4){
+        materia.nota = true;
+    }
+});
+
+console.log(aula);
