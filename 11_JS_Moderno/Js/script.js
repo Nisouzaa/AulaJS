@@ -132,16 +132,26 @@ products.map((product) => {
 console.log(products);
 
 const aula = [
-    { portugues: "verbo", sala: 2, professor: "Guilherme" },
-    { matematica: "Dividir", sala: 4, professor: "Luan" },
-    { geografia: "Montanhas", sala: 5, professor: "Denes" },
-    { ingles: "tuby", sala: 3, professor: "Romero" },
+  { portugues: "verbo", sala: 2, professor: "Guilherme" },
+  { matematica: "Dividir", sala: 4, professor: "Luan" },
+  { geografia: "Montanhas", sala: 5, professor: "Denes" },
+  { ingles: "tuby", sala: 3, professor: "Romero" },
 ];
 
 aula.map((materia) => {
-    if(materia.sala === 4){
-        materia.nota = true;
-    }
+  if (materia.sala === 4) {
+    materia.nota = true;
+  }
 });
 
 console.log(aula);
+
+// 5 - Template Literals
+// O recusro de template literals permite a ipressão de variáveis em um texto
+// Escrevermos entres crases, dessa maneira: `texto`
+// E as variáveis são inseridas com: ${variavel}
+
+const userName = "Nicolas";
+const age = 25;
+
+console.log(`O nome do usúario é ${userName} e tem ${age} anos`);
