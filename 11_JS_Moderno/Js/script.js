@@ -155,3 +155,105 @@ const userName = "Nicolas";
 const age = 25;
 
 console.log(`O nome do usúario é ${userName} e tem ${age} anos`);
+
+// 6 - Dsetructuring
+// O destructuring desestrutura dados complexos em várias variáveis
+// Podemos utilizar em arrays e objetos
+// Muitas variáveis podem ser criadas em um única linha
+const fruts = ["maça", "Banana", "Uva"];
+
+const [f1, f2, f3] = fruts;
+
+console.log(f3, f1);
+
+const productDatails = {
+  name: "Mause",
+  price: 39.99,
+  category: "Periferico",
+  color: "Cinza",
+};
+
+const { name: productName, price, category, color } = productDatails;
+
+console.log(
+  `O nome do produto é ${productName}, ele é da categoria ${category} custa R$${price}`
+);
+
+// 7 - Spread operator
+// o spread pode ser utilizado em arrays e objetos
+// Utilizados para inserir novos valores em um array ou objeto
+// É um recusro que pode unir dois arrays, por exemplo
+const a1 = [1, 2, 3];
+const a2 = [4, 5, 6];
+
+const a3 = [...a1, ...a2];
+
+console.log(a3);
+
+const a4 = [0, ...a3, 7];
+
+console.log(a4);
+
+const carName = { name: "Gol" };
+const carBrand = { brand: "VW" };
+const otherInfos = { km: 100000, price: 49999 };
+
+const car = { ...carName, ...carBrand, ...otherInfos };
+
+console.log(car);
+
+// 8 - Classes
+// As classes são recursos fundamentais para programar orientado a objetos
+// Temos acessos a recursos importantes, como:
+// constructor, propriedades, métodos
+// Antes as classes em JavaScrprit eram ciradas com constructor functions
+
+class Product {
+  constructor(name, price) {
+    this.name = name;
+    this.price = price;
+  }
+
+  productWithDiscount(discount) {
+    return this.price * ((100 - discount) / 100);
+  }
+}
+
+const shirt = new Product("Camisa gola V", 200);
+
+console.log(shirt);
+
+console.log(shirt.productWithDiscount(10));
+console.log(shirt.productWithDiscount(30));
+
+// 9 - Herança
+// Herança é o recurso que nós da a possibilidade de uma classe herdar métodos e propriedades de outras
+// A palavra extends determina qual classe será herdada
+// Para enviar propriedades para a classe pai utilizamos super, isso é necessário
+class ProductWhithAttributes extends Product {
+  constructor(name, price, colors) {
+    super(name, price);
+    this.colors = colors;
+  }
+
+  showcolors() {
+    console.log("As cores São:");
+    this.colors.forEach((color) => {
+      console.log(color);
+    });
+  }
+}
+
+const hat = new ProductWhithAttributes("Chapéu", 30.99, [
+  "Preto",
+  "Marron",
+  "Cinza",
+]);
+
+console.log(hat);
+
+console.log(hat.name);
+
+hat.showcolors();
+
+console.log(hat.productWithDiscount(50));
