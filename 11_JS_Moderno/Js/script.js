@@ -257,3 +257,4 @@ console.log(hat.name);
 hat.showcolors();
 
 console.log(hat.productWithDiscount(50));
+
