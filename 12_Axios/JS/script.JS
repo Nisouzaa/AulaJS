@@ -60,11 +60,11 @@ const printData = async () => {
 
     div.appendChild(emailElement);
 
-    const idElement = document.createElement("p");
+    // const idElement = document.createElement("p");
 
-    idElement.textContent = user.id;
+    // idElement.textContent = user.id;
 
-    div.appendChild(idElement);
+    // div.appendChild(idElement);
 
     container.appendChild(div);
   });
