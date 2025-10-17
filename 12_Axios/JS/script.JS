@@ -76,3 +76,21 @@ printData();
 // Os headers são configurados no momento da requisição;
 // Podemos adicionar parâmetros adicionais;
 // por exemplo: determinar o tipo de dados que queremos;
+// Junto com o 2 Exercício
+
+// 5 - Requisição de Post
+// para Enviar dados vamos utilizar o método post
+// É necessário configurar a propreiedade body cvom os dados a serem enviados;
+const form = document.querySelector("#post-form");
+const titleInput = document.querySelector("#title");
+const bodyInput = document.querySelector("#body");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  axios.post("https://jsonplaceholder.typicode.com/posts", {
+    title: titleInput.value,
+    body: bodyInput.value,
+    userId: 1,
+  });
+});
