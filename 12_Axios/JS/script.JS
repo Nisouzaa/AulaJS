@@ -35,7 +35,7 @@ const gatData = async () => {
 gatData();
 
 // 3 - Exibindo dados na tela
-// Após um request pe comum exibir os dados na tela;
+// Após um request é comum exibir os dados na tela;
 // Podemos fazer isso juntando a resposta da chamada com os nosso conhecimentos em DOM;
 // criar elementos baseados no que veio na requisição;
 const container = document.querySelector("#user-container");
@@ -60,11 +60,11 @@ const printData = async () => {
 
     div.appendChild(emailElement);
 
-    // const idElement = document.createElement("p");
+    const idElement = document.createElement("p");
 
-    // idElement.textContent = user.id;
+    idElement.textContent = user.id;
 
-    // div.appendChild(idElement);
+    div.appendChild(idElement);
 
     container.appendChild(div);
   });
@@ -80,7 +80,7 @@ printData();
 
 // 5 - Requisição de Post
 // para Enviar dados vamos utilizar o método post
-// É necessário configurar a propreiedade body cvom os dados a serem enviados;
+// É necessário configurar a propreiedade body com os dados a serem enviados;
 const form = document.querySelector("#post-form");
 const titleInput = document.querySelector("#title");
 const bodyInput = document.querySelector("#body");
