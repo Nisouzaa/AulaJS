@@ -13,8 +13,8 @@
 // Como o Axios é baseado em promisses, podemos utilizar as async functions;
 const gatData = async () => {
   try {
-    const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/users",
+    const response = await postsFetch.get(
+      "/users",
       // 4 - definindo headers
       {
         Headers: {
@@ -88,9 +88,27 @@ const bodyInput = document.querySelector("#body");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  axios.post("https://jsonplaceholder.typicode.com/posts", {
+  postsFetch.post("/posts", {
     title: titleInput.value,
     body: bodyInput.value,
     userId: 1,
   });
 });
+
+//  6 - Global Instance do Axios
+// Podemos alterar diretamente as configurações do Axios
+// Isso nos gera uma facilidade de trabalhar com os mesmos parâmetros em todas as reuisições
+// Ou seja, se configuramos os headers na Global, não é necessário configurar nas requisições
+// Pasta global.js
+
+// 7 - Custom Instance do Axios
+// A Custom Instance é semelhante a global Instance
+// Porém aqui temos outras propriedades que são possíveis de configurar, como a baseURL
+// Esta estrátegia deve ser utilizada para personalização do nosso projeto
+// Obs: não é recomendado utilizar as duas instances juntas (manutenção, configuração em dois locais... ).
+// Pasta Custom.js
+
+// 8 - Interceptors
+// Interceptors são como middlewares
+// Ou seja, podemos interceptar a requisição e a resposta
+// Inserindo algum código entre estas duas ações.
