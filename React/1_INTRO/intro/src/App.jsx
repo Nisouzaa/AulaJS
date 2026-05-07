@@ -10,6 +10,7 @@ function App() {
   return (
         <div className="hero">
           <h1>"Bem-vindo ao React!"</h1>
+          <h2>"Vamos construir algo incrível juntos!"</h2>
         </div>
     
   )
