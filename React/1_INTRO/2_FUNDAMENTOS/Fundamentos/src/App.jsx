@@ -1,20 +1,21 @@
+import "./App.css";
 
-import './App.css'
+// 2 - Importando componentes
+import FirstComponent from "./components/FirstComponent";
+
+// 4 - Template Expression
+import TemplateExpression from "./components/TemplateExpression";
 
 function App() {
-
+  // 3 - Comentarios
   return (
-    <>
-      <section id="center">
-        <div className="hero">
+        <div className="App">
+          {/* Comentário em JSX */}
           <h1>Fundamentos do React</h1>
+          <FirstComponent />
+          <TemplateExpression />
         </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+  );
 }
 
-export default App
+export default App;
