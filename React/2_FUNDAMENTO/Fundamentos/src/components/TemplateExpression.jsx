@@ -3,6 +3,7 @@
 const TemplateExpression = () => {
   const name = "Nicolas";
 
+  // Podemos colocar qualquer expressão dentro das chaves, como por exemplo um objeto, uma função, etc.
   const data = {
     age: 26,
     job: "Programador",

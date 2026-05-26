@@ -6,6 +6,9 @@ import FirstComponent from "./components/FirstComponent";
 // 4 - Template Expression
 import TemplateExpression from "./components/TemplateExpression";
 
+// 5 - Hierarquia de componentes
+import MyComponent from "./components/MyComponent";
+
 function App() {
   // 3 - Comentarios
   return (
@@ -14,6 +17,7 @@ function App() {
           <h1>Fundamentos do React</h1>
           <FirstComponent />
           <TemplateExpression />
+          <MIDIAccess />
         </div>
   );
 }
