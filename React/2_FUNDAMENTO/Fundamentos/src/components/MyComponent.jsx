@@ -9,3 +9,5 @@ const MyComponent = () => {
 };
 
 export default MyComponent
+
+{/* 5 - Hierarquia de componentes, onde um componente pode ser utilizado dentro do outro, formando uma hierarquia. */ }
