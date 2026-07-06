@@ -15,6 +15,7 @@
 // Podemos pegar o valor original dos dados, e fazer alguma alteração;
 // Muito utilizado em listas, pois pegamos o valor antigo e o modificamos;
 // O primeiro argumento do set sempre é o previous state.
+// useState é um hook do React que permite adicionar estado a componentes funcionais. Ele retorna um array com dois elementos: o estado atual e uma função para atualizá-lo. O estado pode ser de qualquer tipo, como números, strings, objetos ou arrays. Quando o estado é atualizado, o componente é re-renderizado com os novos valores.
 
 import { useState } from "react";
 

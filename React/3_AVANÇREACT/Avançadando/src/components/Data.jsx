@@ -4,6 +4,7 @@
 // Utilizmos este hook pois as variáveis não funionam como esperado, elas não re-renderizam o coponente;
 // Para guardar um dado vamos utilizar setNomeDoDado, e para atualizar o dado, utilizamos a função setNomeDoDado, passando o novo valor como argumento;
 
+// anotherNumber é o valor do estado, e setAnotherNumber é a função que atualiza o valor do estado. O argumento passado para o useState é o valor inicial do estado.
 
 import { useState } from "react";
 
